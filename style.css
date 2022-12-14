@@ -1,0 +1,45 @@
+.modall{
+    display:none;
+    position:absolute;
+    background-color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 1px #35797d;
+    box-shadow: 1px 1px #888;
+}
+
+.modall h3{
+    color: #35797d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modall input{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: #35797d;
+    background: none;
+    border: none;
+}
+
+.modall button{
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    background-color: #f00;
+    border-radius: 10px;
+    box-shadow: 2px 2px #888;
+    margin-left: 0px;
+}
+
+.excluir{
+    width: 550px;
+    height: 200px;
+    top:30%;
+    left:30%;
+}

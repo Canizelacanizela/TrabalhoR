@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chamados</title>
+</head>
+<body onload="carregar()">
+    <header>
+        <nav>
+            <ul>
+                <li>Chamados</li>
+                <li><button  class="btn-cad" onclick="modal1.setAttribute('style','display:flex')">Criar</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <table id="content">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tipo</th>
+                    <th>Severidade</th>
+                    <th>Descrição</th>
+                    <th>Data</th>
+                    <th>Hora</th>
+                    <th>Hora Inicio</th>
+                    <th>Hora Fim</th>
+                    <th>Destino</th>
+                    <th>Alterar</th>
+                    <th>Apagar</th>
+                </tr>
+            </thead>
+            <tbody id="lista">
+            </tbody>
+        </table>
+
+        <div id="modal1" class="modal">
+            <div id="novo">
+                <div class="modalHeader">
+                    <h3>Criar Chamado</h3>
+                    <button onclick="modal1.setAttribute('style','display:none')">X</button>
+                </div>
+                <div class="modalForm">
+                    
+                    <label for="">Tipo:</label><input type="text" id="tipo" />
+                    
+                    <label for="">Severidade:</label>  <input type="text" id="severidade" />
+                   
+                    <label for="">Descrição:</label><textarea name="" class="e" cols="20" rows="10" id="descricao"></textarea>
+                   
+                    <label for="">Destino:</label> <input class="pl" type="text" id="destino" />
+                
+                </div>
+                <div class="modalFooter">
+                    <button class="bn" onclick="cadastrarChamado()">Criar</button>
+                </div>
+            </div>
+        </div>
+        <div id="modal2" class="modal">
+            <div id="alerta">
+                <div class="modalHeader">
+                    <h3>Mensagem</h3>
+                    <button onclick="modal2.setAttribute('style','display:none')">X</button>
+                </div>
+                <div id="msg"></div>
+            </div>
+        </div>
+
+        <div id="modalExcluir" class="modall excluir">
+            <h3>Exclusão de cliente<input type="button" value="X" onclick="window.location.reload()"> </h3>
+            <p>Atenção! Tem certeza que deseja excluir o Cliente <label id="cpfExclui"></label>? Essa ação não poderá ser desfeita.</p>
+            <button id="confirmaExclusao" onclick="excluir(cpfExclui.innerHTML)">Excluir</button>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
+
+
