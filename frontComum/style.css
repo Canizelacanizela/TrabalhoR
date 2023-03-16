@@ -1,0 +1,420 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.head{
+    height: 5vh;
+    background-color: #59adbe;
+    width: 100vw;
+    align-items: center;
+    display: flex;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+
+
+ul li h1{
+    padding: 0 20px;
+    text-decoration: none;
+    color:rgb(66, 65, 65);
+    display: inline-block;
+    font-size: 20px;
+}
+
+li h1::after {
+    content: '';
+    display: block;
+    height: 4px;
+    border-radius: 10px;
+    width: 0;
+    background: rgb(38, 126, 185);
+    transition:all .6s;
+}
+
+li h1:hover::after{
+    width:100%;
+}
+
+ul li a{
+    padding: 0 20px;
+    text-decoration: none;
+    color:rgb(66, 65, 65);
+    display: inline-block;
+    font-size: 20px;
+}
+
+li a::after {
+    content: '';
+    display: block;
+    height: 4px;
+    border-radius: 10px;
+    width: 0;
+    background: rgb(38, 126, 185);
+    transition:all .6s;
+}
+
+li a:hover::after{
+    width:100%;
+}
+
+
+body{
+    margin: 0;  
+}
+
+p{
+    color:#fffffffd;
+    letter-spacing: 1px;
+}
+
+.info-video{
+    width: 100vw;
+    height: 55vh;
+    background: hsl(255, 19%, 21%);
+    display:flex;
+    align-items: flex-start;
+    padding: 25px;
+    gap: 25px;
+}
+
+.info-tudo{
+    width: 100vw;
+    height: 40vh;
+    background: hsl(255, 19%, 21%);
+    display:flex;
+    align-items: flex-start;
+    padding: 25px;
+    gap: 25px;
+}
+
+.info{
+    width: 18%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #3c3452;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.contain{
+    display: flex;
+    flex-direction:row ;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.btn{
+    width: 400%;
+    padding: 2px 12px;
+    margin-top: 12px;
+    margin-left: 07px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-weight: 800;
+    color: #2f2841;
+    background-color: #59adbe;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #006efd52;
+}
+
+
+.model{
+    display: none;
+    visibility: hidden;
+}
+
+/* Cadastrar */
+.modal {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    align-items: center;
+}
+
+#novo{
+    border-radius: 10px;
+}
+
+.fechar{
+    cursor:pointer;
+    outline: none;
+    border:none;
+    font-weight: 800;
+}
+
+
+.modalHeader {
+    display: flex;
+    border-radius: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    box-shadow: 0px 1px 5px rgb(36, 85, 158);
+}
+
+.modalHeader h3{
+    margin: 5px;
+}
+
+.modalHeader button {
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;  
+    margin: 4px;
+    background-color: #eceaeae5;
+    border-radius: 5px;
+    box-shadow: 0px 1px 4px rgb(53, 54, 54);
+}
+
+.modalForm{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.modalFooter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.modalFooter .bn {
+    padding: 14px 10px;
+    margin: 4px;
+    width: 40%;
+    height: 50px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #f5f4f4e5;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgb(47, 47, 48);
+}
+
+#novo {
+    display: block;
+    position: relative;
+    width: 450px;
+    top: 250px;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px black;
+}
+
+.lab{
+    gap:25px;
+    margin-top: 7px;
+    margin-left: 17px;
+}
+.labc1{
+    gap:25px;
+    margin-top: 7px;
+    margin-left: 75px;
+}
+.labc2{
+    gap:25px;
+    margin-top: 8px;
+    margin-left: 60px;
+}
+.labc3{
+    gap:25px;
+    margin-top: 8px;
+    margin-left: 68px;
+}
+
+#novo input{
+    border: solid 1px #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    outline:none;
+    
+}
+
+#novo .pl{
+    border: solid 1px #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#alerta {
+    display: block;
+    position: relative;
+    width: 400px;
+    top: 200px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px black;
+    flex-direction: column;
+}
+
+#btn-cad{
+    width: 100%;
+    padding: 14px 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2f2841;
+    background-color: #59adbe;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #076aeb8f;
+}
+
+/* -------------------------------------- Alterar -------------------------------------------------*/
+
+.modall {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    align-items: center;
+}
+
+#novo3{
+    border-radius: 10px;
+}
+
+.fechar{
+    cursor:pointer;
+    outline: none;
+    border:none;
+    font-weight: 800;
+}
+
+
+.modal3Header {
+    display: flex;
+    border-radius: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    box-shadow: 0px 1px 3px rgba(14, 93, 211, 0.493);
+}
+
+.modal3Header h3{
+    margin: 5px;
+}
+
+.modal3Header button {
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;  
+    margin: 4px;
+    background-color: #eceaeae5;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgb(53, 54, 54);
+}
+
+.modal3Form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.modal3Footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.modal3Footer .bn-alt {
+    padding: 14px 10px;
+    margin: 4px;
+    width: 40%;
+    height: 50px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #eceaeae5;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px rgb(47, 47, 48);
+}
+
+#novo3 {
+    display: block;
+    position: relative;
+    width: 450px;
+    top: 250px;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px black;
+}
+.laba1{
+    gap:25px;
+    margin-top: 7px;
+    margin-left: 72px;
+}
+.laba2{
+    gap:25px;
+    margin-top: 8px;
+    margin-left: 58px;
+}
+.laba3{
+    gap:25px;
+    margin-top: 8px;
+    margin-left: 67px;
+}
+
+#novo3 input{
+    border: solid 1px #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    outline:none;
+    
+}
+
+#novo3 .pl{
+    border: solid 1px #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#alerta {
+    display: block;
+    position: relative;
+    width: 400px;
+    top: 200px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px black;
+    flex-direction: column;
+}
